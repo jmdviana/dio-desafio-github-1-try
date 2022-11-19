@@ -1,0 +1,16 @@
+Passo a passo criação SSH
+Abrir GIT Bash
+Digitar: $ ssh-keygen -t ed25519 iC email
+(Par de chaves publica e privada serão geradas e local de arquivo será informado)
+* pastas inciadas com . indicam que são ocultas
+Enter> solicitará senha. Retornará informação acima. 
+
+Digitar $ cd/ c/endereço da chave
+Digitar $ls (listar arquivos)
+Digitar $ cat id_ed25519.pub  (a exposição da chave serem será a chave publica)
+Copia valor e insere no campo de chave SSH no Github
+Solicitará senha Github, inserir e autenticar
+
+Dentro da pasta SSH
+$eval $ (ssh-agent -s)  Procedimento irá iniciar agente ssh, entidade encarregada de pegar e utilizar chaves dentro do pc
+$ ssh-add (+ caminho da chave) ex. id_ed25519 (ja está dentro da pasta, só informar chave)
